@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de JSON con Bootstrap</title>
+    <!-- Incluye los archivos de Bootstrap CSS y JavaScript -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+
+        <div class="row">
+          <div class="col-3">
+            <!-- User Data -->
+            <div class="card ">
+                <div class="card-header text-center text-white bg-dark">
+                  Clients
+                </div>
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Client</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-body">
+                        <!-- Aquí se llenará la tabla con datos del JSON -->
+                    </tbody>
+                </table>
+
+
+            </div>
+           
+
+            
+
+            <!-- En User Data -->
+
+            <!-- Driver -->
+            <!-- User Driver -->
+
+            <div class="card ">
+                <div class="card-header text-center text-white bg-dark">
+                  Drivers
+                </div>
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>ID</th>
+                            <th>Driver</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-body2">
+                        <!-- Aquí se llenará la tabla con datos del JSON -->
+                    </tbody>
+                </table>
+
+
+            </div>
+           
+
+        
+
+        <!-- En User Driver -->
+        <!--  Form -->
+        <div class="card ">
+            <div class="card-header text-center text-white bg-dark">
+                Driver Confirmation
+            </div>
+            
+                <div class="mb-3 row">
+                    <label for="id" class="col-sm-2 col-form-label">ID:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="id" placeholder="Ingrese el ID">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="client" class="col-sm-2 col-form-label">Client:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="client" placeholder="Ingrese el nombre del cliente">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="phone" placeholder="Ingrese el número de teléfono">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="driver" class="col-sm-2 col-form-label">Driver:</label>
+                    <div class="col-sm-10">
+                        <select class="form-select form-control" id="driver">
+
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-sm-10 offset-sm-2">
+                        <button class="btn btn-primary" onclick="saveData()">Enviar</button>
+                        <!-- <button onclick="findClient(1)">Set</button> -->
+                    </div>
+                </div>
+            
+
+
+        </div>
+
+        <div class="container mt-5">
+
+        </div>
+        
+        <!-- End Form -->
+          </div>
+        
+          <div class="col-9">
+            <!-- MAPS -->
+            <div id="map"></div>
+            <div class="container">
+                <div class="card ">
+                    <div class="card-header text-center text-white bg-dark">
+                      Tracker
+                    </div>
+                    <table class="table" id="tabla3">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Client</th>
+                                <th scope="col">Driver</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-body3">
+                            <!-- Aquí se llenará la tabla con datos del JSON -->
+                        </tbody>
+                    </table>
+    
+    
+                </div>
+              </div>
+
+          </div>
+
+        </div>
+
+    
+    <!-- Enlaza Bootstrap JS (opcional, dependiendo de tus necesidades) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script1.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnw3OEBS5PVl7zbewVULXWB4-FZtHptqA&callback=initMap" async defer></script>
+</body>
+</html>
